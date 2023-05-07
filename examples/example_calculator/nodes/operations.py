@@ -81,7 +81,10 @@ class CalcNode_BatchNorm2d(CalcNode):
     #     self.eval()
 
     def evalOperation(self, input1, input2):
-        return torch.nn.BatchNorm2d(**input2)(input1)
+        try:
+            return eval('torch.nn.BatchNorm2d'+input2)(input1)
+        except:
+            return torch.nn.BatchNorm2d(**input2)(input1)
 @register_node(OP_NODE_BatchNorm1d)
 class CalcNode_BatchNorm1d(CalcNode):
     # icon = "icons/divide.png"
@@ -95,7 +98,10 @@ class CalcNode_BatchNorm1d(CalcNode):
     #     self.eval()
 
     def evalOperation(self, input1, input2):
-        return torch.nn.BatchNorm1d(**input2)(input1)
+        try:
+            return eval('torch.nn.BatchNorm1d'+input2)(input1)
+        except:
+            return torch.nn.BatchNorm1d(**input2)(input1)
 
 @register_node(OP_NODE_CONV2D)
 class CalcNode_CONV2D(CalcNode):
@@ -107,7 +113,10 @@ class CalcNode_CONV2D(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
-        return torch.nn.Conv2d(**input2)(input1)
+        try:
+            return eval('torch.nn.Conv2d'+input2)(input1)
+        except:
+            return torch.nn.Conv2d(**input2)(input1)
 @register_node(OP_NODE_CONV1D)
 class CalcNode_CONV1D(CalcNode):
     # icon = "icons/divide.png"
@@ -118,7 +127,10 @@ class CalcNode_CONV1D(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
-        return torch.nn.Conv1d(**input2)(input1)
+        try:
+            return eval('torch.nn.Conv1d'+input2)(input1)
+        except:
+            return torch.nn.Conv1d(**input2)(input1)
 
 @register_node(OP_NODE_FLATTEN)
 class CalcNode_FLATTEN(CalcNode):
@@ -130,7 +142,10 @@ class CalcNode_FLATTEN(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
-        return torch.nn.Flatten(**input2)(input1)
+        try:
+            return eval('torch.nn.Flatten'+input2)(input1)
+        except:
+            return torch.nn.Flatten(**input2)(input1)
 
 
 @register_node(OP_NODE_LINEAR)
@@ -143,7 +158,10 @@ class CalcNode_LINEAR(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
-        return torch.nn.Linear(**input2)(input1)
+        try:
+            return eval('torch.nn.Linear'+input2)(input1)
+        except:
+            return torch.nn.Linear(**input2)(input1)
 
 
 @register_node(OP_NODE_MaxPool2d)
@@ -156,7 +174,10 @@ class CalcNode_MaxPool2d(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
-        return torch.nn.MaxPool2d(**input2)(input1)
+        try:
+            return eval('torch.nn.MaxPool2d'+input2)(input1)
+        except:
+            return torch.nn.MaxPool2d(**input2)(input1)
 
 
 @register_node(OP_NODE_RELU)
@@ -169,7 +190,10 @@ class CalcNode_RELU(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
-        return torch.nn.ReLU(**input2)(input1)
+        try:
+            return eval('torch.nn.ReLU'+input2)(input1)
+        except:
+            return torch.nn.ReLU(**input2)(input1)
 
 
 @register_node(OP_NODE_DROPOUT)
@@ -182,7 +206,10 @@ class CalcNode_DROPOUT(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
-        return torch.nn.Dropout(**input2)(input1)
+        try:
+            return eval('torch.nn.Dropout'+input2)(input1)
+        except:
+            return torch.nn.Dropout(**input2)(input1)
 
 
 @register_node(OP_NODE_AdaptiveAvgPool2d)
@@ -195,7 +222,10 @@ class CalcNode_AdaptiveAvgPool2d(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
-        return torch.nn.AdaptiveAvgPool2d(**input2)(input1)
+        try:
+            return eval('torch.nn.AdaptiveAvgPool2d'+input2)(input1)
+        except:
+            return torch.nn.AdaptiveAvgPool2d(**input2)(input1)
 
 @register_node(OP_NODE_AdaptiveMaxPool2d)
 class CalcNode_AdaptiveMaxPool2d(CalcNode):
@@ -207,7 +237,10 @@ class CalcNode_AdaptiveMaxPool2d(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
-        return torch.nn.AdaptiveMaxPool2d(**input2)(input1)
+        try:
+            return eval('torch.nn.AdaptiveMaxPool2d'+input2)(input1)
+        except:
+            return torch.nn.AdaptiveMaxPool2d(**input2)(input1)
 # torch.nn.AdaptiveMaxPool2d()
 
 @register_node(OP_NODE_Softmax)
@@ -220,7 +253,10 @@ class CalcNode_Softmax(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
-        return torch.nn.Softmax(**input2)(input1)
+        try:
+            return eval('torch.nn.Softmax'+input2)(input1)
+        except:
+            return torch.nn.Softmax(**input2)(input1)
 
 
 @register_node(OP_NODE_SUM)
@@ -247,7 +283,10 @@ class CalcNode_Rearrange(CalcNode):
     def evalOperation(self, input1, input2):
         # print(input2)
         # Rearrange(pattern='')
-        return Rearrange(**input2)(input1)
+        try:
+            return eval('Rearrange'+input2)(input1)
+        except:
+            return Rearrange(**input2)(input1)
 
 @register_node(OP_NODE_Reduce)
 class CalcNode_Rearrange(CalcNode):
@@ -259,7 +298,10 @@ class CalcNode_Rearrange(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
-        return Reduce(**input2)(input1)
+        try:
+            return eval('Reduce'+input2)(input1)
+        except:
+            return Reduce(**input2)(input1)
 
 @register_node(OP_NODE_Matmul)
 class CalcNode_Rearrange(CalcNode):
@@ -271,6 +313,7 @@ class CalcNode_Rearrange(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
+
         return torch.matmul(input1, input2)
 
 # torch.nn.Sigmoid
@@ -284,7 +327,10 @@ class CalcNode_Softmax(CalcNode):
 
     def evalOperation(self, input1, input2):
         # print(input2)
-        return torch.nn.Sigmoid(**input2)(input1)
+        try:
+            return eval('torch.nn.Sigmoid'+input2)(input1)
+        except:
+            return torch.nn.Sigmoid(**input2)(input1)
 
 @register_node(OP_NODE_Stack0)
 class CalcNode_Rearrange(CalcNode):

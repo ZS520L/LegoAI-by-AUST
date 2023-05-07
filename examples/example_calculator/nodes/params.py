@@ -61,7 +61,10 @@ class CalcNode_Input(CalcNode):
 
     def evalImplementation(self):
         u_value = self.content.edit.toPlainText()
-        s_value = eval(u_value)
+        try:
+            s_value = eval(u_value)
+        except:
+            s_value = str(u_value)
         self.value = s_value
         self.markDirty(False)
         self.markInvalid(False)
