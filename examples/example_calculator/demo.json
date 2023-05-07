@@ -1,0 +1,358 @@
+{
+    "id": 1963953539112,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 1963953681632,
+            "title": "Input",
+            "pos_x": -682.0,
+            "pos_y": -16.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1963957208736,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 3
+                }
+            ],
+            "content": {
+                "value": "2,3,224,224"
+            },
+            "op_code": 1
+        },
+        {
+            "id": 1963957247224,
+            "title": "Conv2d",
+            "pos_x": -465.0,
+            "pos_y": -201.0,
+            "inputs": [
+                {
+                    "id": 1963957285104,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 1963957285160,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1963957285216,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {},
+            "op_code": 8
+        },
+        {
+            "id": 1963957326680,
+            "title": "Output",
+            "pos_x": 903.0,
+            "pos_y": 20.0,
+            "inputs": [
+                {
+                    "id": 1963957327128,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 1
+                }
+            ],
+            "outputs": [],
+            "content": {},
+            "op_code": 2
+        },
+        {
+            "id": 1963957327240,
+            "title": "Flatten",
+            "pos_x": 350.0,
+            "pos_y": -7.0,
+            "inputs": [
+                {
+                    "id": 1963957327184,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 1963957327352,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1963957326400,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {},
+            "op_code": 9
+        },
+        {
+            "id": 1963957326960,
+            "title": "Params",
+            "pos_x": 351.6875,
+            "pos_y": 36.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1963957327520,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 3
+                }
+            ],
+            "content": {
+                "value": "{'start_dim': 1}"
+            },
+            "op_code": 0
+        },
+        {
+            "id": 1963957326456,
+            "title": "Linear",
+            "pos_x": 670.0,
+            "pos_y": 7.0,
+            "inputs": [
+                {
+                    "id": 1963957327296,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 1963957326736,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1963957326792,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {},
+            "op_code": 10
+        },
+        {
+            "id": 1963957327464,
+            "title": "Params",
+            "pos_x": 668.0,
+            "pos_y": 39.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1963957328080,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 3
+                }
+            ],
+            "content": {
+                "value": "{'in_features': 196,\n'out_features':10}"
+            },
+            "op_code": 0
+        },
+        {
+            "id": 2833569699768,
+            "title": "Params",
+            "pos_x": -470.0,
+            "pos_y": -168.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 2833569699880,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 3
+                }
+            ],
+            "content": {
+                "value": "{'in_channels': 3, 'out_channels': 1, 'kernel_size': 3,\n'stride':16}"
+            },
+            "op_code": 0
+        },
+        {
+            "id": 3208061440184,
+            "title": "Conv2d",
+            "pos_x": -480.0,
+            "pos_y": 118.0,
+            "inputs": [
+                {
+                    "id": 3208061440296,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 3208061440352,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 3208061440408,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {},
+            "op_code": 8
+        },
+        {
+            "id": 3208061440464,
+            "title": "Params",
+            "pos_x": -480.0,
+            "pos_y": 152.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 3208061440520,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 3
+                }
+            ],
+            "content": {
+                "value": "{'in_channels': 3, 'out_channels': 1, 'kernel_size': 3,\n'stride':16}"
+            },
+            "op_code": 0
+        },
+        {
+            "id": 3207996918304,
+            "title": "Add",
+            "pos_x": -54.0,
+            "pos_y": 12.0,
+            "inputs": [
+                {
+                    "id": 3207996918416,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 3207996918472,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 3207996918528,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {},
+            "op_code": 3
+        }
+    ],
+    "edges": [
+        {
+            "id": 1963957288744,
+            "edge_type": 2,
+            "start": 1963957208736,
+            "end": 1963957285104
+        },
+        {
+            "id": 1963957326904,
+            "edge_type": 2,
+            "start": 1963957326400,
+            "end": 1963957327296
+        },
+        {
+            "id": 1963957328136,
+            "edge_type": 2,
+            "start": 1963957328080,
+            "end": 1963957326736
+        },
+        {
+            "id": 2763511410024,
+            "edge_type": 2,
+            "start": 1963957327520,
+            "end": 1963957327352
+        },
+        {
+            "id": 2833569699600,
+            "edge_type": 2,
+            "start": 1963957285160,
+            "end": 2833569699880
+        },
+        {
+            "id": 2409305657864,
+            "edge_type": 2,
+            "start": 1963957327128,
+            "end": 1963957326792
+        },
+        {
+            "id": 3208061376832,
+            "edge_type": 2,
+            "start": 3208061440352,
+            "end": 3208061440520
+        },
+        {
+            "id": 3208061440632,
+            "edge_type": 2,
+            "start": 1963957208736,
+            "end": 3208061440296
+        },
+        {
+            "id": 3207996918640,
+            "edge_type": 2,
+            "start": 1963957285216,
+            "end": 3207996918416
+        },
+        {
+            "id": 3207996918808,
+            "edge_type": 2,
+            "start": 3207996918472,
+            "end": 3208061440408
+        },
+        {
+            "id": 3207996918976,
+            "edge_type": 2,
+            "start": 3207996918528,
+            "end": 1963957327184
+        }
+    ]
+}
