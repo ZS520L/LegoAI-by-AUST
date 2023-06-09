@@ -73,7 +73,8 @@ class CalcNode(Node):
     def evalImplementation(self):
         i1 = self.getInput(0)
         i2 = self.getInput(1)
-
+        print(type(i1), type(i2))
+        # if i1 is None or i2 is None:
         if i1 is None or i2 is None:
             self.markInvalid()
             self.markDescendantsDirty()

@@ -20,7 +20,8 @@ OP_NODE_Sigmoid = 16
 OP_NODE_AdaptiveMaxPool2d = 17
 OP_NODE_BatchNorm1d = 18
 OP_NODE_CONV1D = 19
-
+OP_NODE_GELU = 20
+OP_NODE_LayerNorm = 21
 
 OP_NODE_SUM = 137
 OP_NODE_Rearrange = 138
@@ -29,6 +30,7 @@ OP_NODE_Matmul = 140
 OP_NODE_Stack0 = 141
 OP_NODE_Cat0 = 142
 OP_NODE_Cat1 = 143
+OP_NODE_Repeat = 144
 
 CALC_NODES = {
 }
